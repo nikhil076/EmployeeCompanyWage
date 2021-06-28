@@ -7,7 +7,8 @@ public class EmployeeCompanyWage {
 	public static final int DAYS_IN_A_MONTH = 20;
 	public static final int WAGE_PER_DAY = 20;
 
-	public static void main(String[] args) {
+	public static void calculateWage() 
+	{
 		System.out.println("Welcome to Employee Company Wage");
 		int totalWorkingHours = 0;
 		int totalWorkingDays = 0;
@@ -39,5 +40,9 @@ public class EmployeeCompanyWage {
 		System.out.println("Total Working Days :"+totalWorkingDays);
 		System.out.println("Total Wokking hours :"+totalWorkingHours);
 		System.out.println("Monthly employee wage :"+monthlyWage);
+	}
+	
+	public static void main(String[] args) {
+		calculateWage();
 	}
 }
