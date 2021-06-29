@@ -3,8 +3,21 @@ package com.bridgelabz.employee_company_wage;
 public class EmployeeCompanyWage {
 	public static final int IS_FULLTIME_PRESENT  = 1;
 	public static final int IS_PARTTIME_PRESENT = 2;
+	
+	public int maxHours;
+	public int daysInMonth ;
+	public int wagePerHour ;
+	public String companyName;
+	
+	public EmployeeCompanyWage(int wagePerHour,int maxHours,int daysInMonth,String companyName) 
+	{
+		this.wagePerHour = wagePerHour;
+		this.maxHours = maxHours;
+		this.daysInMonth = daysInMonth;
+		this.companyName = companyName;
+	}
 
-	public static void calculateWage(int wagePerHour,int maxHours,int daysInMonth,String companyName) 
+	public void calculateWage() 
 	{
 		System.out.println("Welcome to Employee Company Wage");
 		int totalWorkingHours = 0;
@@ -35,13 +48,15 @@ public class EmployeeCompanyWage {
 			monthlyWage += dailyWage;
 		}
 		System.out.println("Total Working Days :"+totalWorkingDays);
-		System.out.println("Total Wokking hours :"+totalWorkingHours);
+		System.out.println("Total Working hours :"+totalWorkingHours);
 		System.out.println("Monthly employee wage for "+companyName+" is :"+monthlyWage);
 	}
 	
 	public static void main(String[] args) {
-		calculateWage(100,10,20,"Dmart");
+		EmployeeCompanyWage Dmart = new EmployeeCompanyWage(100, 10, 20, "Dmart");
+		Dmart.calculateWage();
 		System.out.println();
-		calculateWage(200,15,25,"BigBazar");
+		EmployeeCompanyWage BigBazar = new EmployeeCompanyWage(200, 15, 25, "BigBazar");
+		BigBazar.calculateWage();
 	}
 }
