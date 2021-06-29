@@ -1,6 +1,7 @@
 package com.bridgelabz.employee_company_wage;
 	
-public class CompanyEmpWage {
+public class CompanyEmpWage
+{
 	
 	public final int maxHours;
 	public final int daysInMonth ;
@@ -8,7 +9,8 @@ public class CompanyEmpWage {
 	public final String companyName;
 	public int totalEmpWage;
 	
-	public CompanyEmpWage(int maxHours, int daysInMonth, int wagePerHour, String companyName) {
+	public CompanyEmpWage(int maxHours, int daysInMonth, int wagePerHour, String companyName)
+	{
 		super();
 		this.maxHours = maxHours;
 		this.daysInMonth = daysInMonth;
@@ -16,16 +18,19 @@ public class CompanyEmpWage {
 		this.companyName = companyName;
 	}
 
-	public int getTotalEmpWage() {
+	public int getTotalEmpWage()
+	{
 		return totalEmpWage;
 	}
 
-	public void setTotalEmpWage(int totalEmpWage) {
+	public void setTotalEmpWage(int totalEmpWage)
+	{
 		this.totalEmpWage = totalEmpWage;
 	}
 
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		return "Company Employee Wage for "+companyName +" is : " + totalEmpWage ;
 	}
 	
