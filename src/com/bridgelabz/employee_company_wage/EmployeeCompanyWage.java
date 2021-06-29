@@ -3,21 +3,8 @@ package com.bridgelabz.employee_company_wage;
 public class EmployeeCompanyWage {
 	public static final int IS_FULLTIME_PRESENT  = 1;
 	public static final int IS_PARTTIME_PRESENT = 2;
-	
-	public int maxHours;
-	public int daysInMonth ;
-	public int wagePerHour ;
-	public String companyName;
-	
-	public EmployeeCompanyWage(int wagePerHour,int maxHours,int daysInMonth,String companyName) 
-	{
-		this.wagePerHour = wagePerHour;
-		this.maxHours = maxHours;
-		this.daysInMonth = daysInMonth;
-		this.companyName = companyName;
-	}
 
-	public void calculateWage() 
+	public static void calculateWage(int wagePerHour,int maxHours,int daysInMonth,String companyName) 
 	{
 		System.out.println("Welcome to Employee Company Wage");
 		int totalWorkingHours = 0;
@@ -53,10 +40,8 @@ public class EmployeeCompanyWage {
 	}
 	
 	public static void main(String[] args) {
-		EmployeeCompanyWage Dmart = new EmployeeCompanyWage(100, 10, 20, "Dmart");
-		Dmart.calculateWage();
+		calculateWage(100,10,20,"Dmart");
 		System.out.println();
-		EmployeeCompanyWage BigBazar = new EmployeeCompanyWage(200, 15, 25, "BigBazar");
-		BigBazar.calculateWage();
+		calculateWage(200,15,25,"BigBazar");
 	}
 }
